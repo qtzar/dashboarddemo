@@ -4,8 +4,8 @@ import { BrowserRouter } from 'react-router-dom'
 import App from './App'
 import './index.css'
 
-// Set basename to match Vite base for GitHub Pages
-const basename = import.meta.env.PROD ? '/dashboarddemo' : '/'
+// Use Vite's BASE_URL which automatically matches the base config
+const basename = import.meta.env.BASE_URL
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
