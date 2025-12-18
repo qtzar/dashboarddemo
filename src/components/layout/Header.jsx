@@ -9,7 +9,7 @@ export default function Header() {
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-4">
           <img
-            src="/trc-logo.svg"
+            src={`${import.meta.env.BASE_URL}trc-logo.svg`}
             alt="TRC Global Mobility"
             className="h-12"
           />
