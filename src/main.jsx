@@ -1,16 +1,16 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { BrowserRouter } from 'react-router-dom'
+import { HashRouter } from 'react-router-dom'
 import App from './App'
 import './index.css'
 
-// Use Vite's BASE_URL which automatically matches the base config
-const basename = import.meta.env.BASE_URL
-
+// Use HashRouter for GitHub Pages compatibility
+// URLs will be like: /#/dashboard instead of /dashboard
+// This works because the hash is never sent to the server
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter basename={basename}>
+    <HashRouter>
       <App />
-    </BrowserRouter>
+    </HashRouter>
   </React.StrictMode>
 )
